@@ -1,0 +1,6 @@
+node_modules/
+dist/
+maia3-5m.safetensors
+tools/.venv/
+tools/checkpoints/
+__pycache__/

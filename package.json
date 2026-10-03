@@ -1,0 +1,33 @@
+{
+  "name": "maia3-ts",
+  "version": "0.1.0",
+  "description": "Maia-3 human-like chess move prediction in plain TypeScript, with no native or WASM dependencies",
+  "type": "module",
+  "license": "AGPL-3.0-or-later",
+  "repository": "github:dmallory42/maia3-ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "prepare": "npm run build",
+    "fetch-weights": "node scripts/fetch-weights.mjs",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "chess.js": "^1.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.3",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3",
+    "vitest": "^5.0.2"
+  }
+}

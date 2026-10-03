@@ -1,0 +1,17 @@
+[project]
+name = "maia3-ts-tools"
+version = "0.1.0"
+description = "Convert Maia-3 checkpoints to safetensors and record reference outputs for maia3-ts"
+requires-python = ">=3.10"
+license = "AGPL-3.0-or-later"
+dependencies = [
+  "maia3 @ git+https://github.com/CSSLab/maia3@1e13597c42d4858b7cfd7cfdae01e297263364b2",
+  "torch",
+  "numpy",
+  "python-chess",
+  "huggingface-hub>=0.23",
+  "safetensors>=0.8.0",
+]
+
+[tool.uv]
+package = false
